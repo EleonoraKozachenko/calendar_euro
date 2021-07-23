@@ -1,0 +1,59 @@
+@import "../../styles/mixins.scss";
+
+.team {
+  @include tableGrid;
+  p {
+    font-size: 14px;
+    color: #a2a2a2;
+    text-align: center;
+    margin: 5px 0;
+
+    &.namePadding {
+      padding-left: 5px;
+    }
+  }
+
+  &__column {
+    border: 1px solid #e4e3e3;
+    padding: 5px;
+    overflow: hidden;
+    min-height: 24px;
+  }
+
+  &__nameColumn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__icon {
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  &__modalIconFlag {
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  &__emptyCol {
+    background-color: #ececec;
+  }
+}
+
+.modal {
+  display: grid;
+  grid-gap: 20px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,48 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &__uppercase {
+    text-transform: uppercase;
+  }
+
+  &__bold {
+    font-weight: bold;
+  }
+
+  &__color {
+    &_grey {
+      background: rgb(122, 122, 122);
+      color: #fff;
+    }
+
+    &_white {
+      color: rgb(122, 122, 122);
+      border: 2px solid rgb(122, 122, 122);
+      background: #fff;
+    }
+  }
+
+  &__size {
+    &_sm {
+      min-height: 30px;
+      font-size: 14px;
+    }
+
+    &_md {
+      min-height: 40px;
+      font-size: 16px;
+    }
+  }
+
+  &__icon {
+    max-height: 30px;
+  }
+}

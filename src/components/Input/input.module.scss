@@ -1,0 +1,22 @@
+.input {
+  border: 1px solid #ced4da;
+  color: #495057;
+  height: 38px;
+  min-width: 100px;
+  // width: calc(100% - 10px);
+  padding: 0 5px;
+  border-radius: 3px;
+  text-align: center;
+
+  &::placeholder {
+    color: gray;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+.inputError {
+  color: red;
+  margin-top: 5px;
+  font-size: 12px;
+}

@@ -1,0 +1,9 @@
+@import "../../../styles/constants";
+.cardItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  min-width: 300px;
+  color: $gray-dark3;
+}

@@ -1,24 +1,186 @@
-.app {
+@import "../../styles/constants";
+
+.toggle {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:hover {
+      .toggle__title {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__title {
+    margin-right: 10px;
+    font-size: 14px;
+    opacity: 0;
+    transition: 0.3s;
+    color: $gray2;
+  }
+}
+
+.modal {
+  &__title {
+    color: $gray-dark;
+    font-size: 24px;
+    margin: 20px 10px 30px 0;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.hero {
+  position: relative;
+  padding: 100px 20px;
+  background: {
+    image: url("../../images/pexels-rfstudio-3886235.jpg");
+    size: cover;
+    position: -300px center;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  &__row {
+    z-index: 1;
+    position: relative;
+  }
+
+  &__title {
+    color: $tertiary;
+    font-size: 120px;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: -15px;
+    right: 0;
+  }
+
+  &__subtitle {
+    color: $tertiary;
+    font-size: 40px;
+    z-index: 1;
+    letter-spacing: 1em;
+    margin-top: 40px;
+    padding-left: 40px;
+  }
+}
+
+.title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: $gray-dark;
+}
+
+.tables {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
-  background: no-repeat center 50% url("/images/pexels-pixabay-274506.jpg");
 
-  &__title {
-    font-size: 36px;
-    margin: 20px auto;
-    color: white;
+  &__table {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    &:nth-child(odd) {
+      background: $gray-light3;
+    }
+  }
+
+  &__tableRow {
+    position: relative;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__addGroup {
+    margin-top: 30px;
+  }
+
+  &__deleteGroup {
+    position: absolute;
+    right: -45px;
+    top: 2px;
+  }
+
+  &__addTeam {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+  }
+
+  &__teamWrapper {
+    position: relative;
+  }
+
+  &__deleteTeam {
+    position: absolute;
+    right: -45px;
+    top: 2px;
   }
 }
 
-.calendar {
+.myControlClassName {
+  width: 235px;
+}
+
+.oneEigth {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  flex-direction: column;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.modalFinal {
+  display: grid;
+  grid-gap: 20px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

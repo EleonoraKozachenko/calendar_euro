@@ -102,7 +102,7 @@ export default class Team extends React.Component {
       result[0].score1 = this.state.valueInput2;
       result[0].score2 = this.state.valueInput1;
     }
-    this.props.onSaveModalData();
+    this.props.onSaveScoresData();
     this.onModalClose();
   };
 
@@ -111,7 +111,6 @@ export default class Team extends React.Component {
     const flag = cn(styles.team__column, styles.team__nameColumn);
     const emptyCol = cn(styles.team__column, styles.team__emptyCol);
     const modalFlag = cn(styles.team__icon, styles.team__modalIconFlag);
-
     return (
       <div>
         <div
@@ -182,8 +181,10 @@ export default class Team extends React.Component {
                     />
                     <Input
                       type="number"
-                      min="0"
+                      minValue="0"
                       id="firstTeam"
+                      size="md"
+                      align="center"
                       placeholder={this.state.modalTeam1.name}
                       onChange={(value) => this.onAddScore("input1", value)}
                       value={this.state.valueInput1}
@@ -198,8 +199,10 @@ export default class Team extends React.Component {
                     />
                     <Input
                       type="number"
-                      min="0"
+                      minValue="0"
                       id="secondTeam"
+                      size="md"
+                      align="center"
                       placeholder={this.state.modalTeam2.name}
                       onChange={(value) => this.onAddScore("input2", value)}
                       value={this.state.valueInput2}
@@ -207,7 +210,7 @@ export default class Team extends React.Component {
                   </div>
                 </div>
                 <Button
-                  text="save"
+                  text="Сохранить"
                   uppercase
                   onClick={() =>
                     this.onSaveScore(
@@ -215,7 +218,7 @@ export default class Team extends React.Component {
                       this.state.modalTeam2
                     )
                   }
-                  color="grey"
+                  color="gray"
                   size="sm"
                 />
               </div>

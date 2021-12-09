@@ -1,22 +1,49 @@
+@import "../../styles/constants";
+
 .input {
-  border: 1px solid #ced4da;
-  color: #495057;
-  height: 38px;
-  min-width: 100px;
-  // width: calc(100% - 10px);
+  border: 1px solid $gray2;
+  color: $gray-dark2;
   padding: 0 5px;
   border-radius: 3px;
-  text-align: center;
 
-  &::placeholder {
-    color: gray;
-    font-size: 16px;
-    text-align: center;
+  &__size {
+    &_xs {
+      min-height: 32px;
+      width: 50px;
+    }
+
+    &_sm {
+      min-height: 32px;
+      min-width: 120px;
+    }
+
+    &_md {
+      min-height: 38px;
+      min-width: 160px;
+    }
+  }
+
+  &__align {
+    &_center {
+      text-align: center;
+      &::placeholder {
+        color: $gray;
+        text-align: center;
+      }
+    }
+
+    &_left {
+      text-align: left;
+      &::placeholder {
+        color: $gray;
+        text-align: left;
+      }
+    }
   }
 }
 
 .inputError {
-  color: red;
+  color: $error;
   margin-top: 5px;
   font-size: 12px;
 }

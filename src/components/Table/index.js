@@ -1,12 +1,18 @@
 import React from "react";
 import styles from "./table.module.scss";
+import cn from "classnames";
 
 const Table = (props) => {
-  const { group, children } = props;
+  const { group, children, empty } = props;
+
+  const mainStyleTable = cn(styles.table, {
+    [styles["table__empty"]]: empty,
+  });
+
   return (
-    <div className={styles.table}>
+    <div className={mainStyleTable}>
       <div className={styles.table__title}>
-        <p>{group.name}</p>
+        <p>{`Группа ${group.name}`}</p>
       </div>
       <div
         className={styles.table__head}

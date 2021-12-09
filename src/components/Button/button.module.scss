@@ -1,9 +1,11 @@
+@import "../../styles/constants";
+
 .button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
   border-radius: 5px;
+  transition: 0.3s;
 
   &:hover {
     opacity: 0.9;
@@ -17,32 +19,101 @@
     font-weight: bold;
   }
 
+  &__disabled {
+    opacity: 0.5;
+    &:hover {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+
   &__color {
-    &_grey {
-      background: rgb(122, 122, 122);
-      color: #fff;
+    &_accent {
+      background: $secondary;
+      color: $tertiary;
+    }
+
+    &_gray {
+      background: $gray;
+      color: $tertiary;
+    }
+
+    &_grayRound {
+      border-radius: 50%;
+      background-color: transparent;
+      border: 2px solid $gray-dark2;
     }
 
     &_white {
-      color: rgb(122, 122, 122);
-      border: 2px solid rgb(122, 122, 122);
-      background: #fff;
+      color: $gray;
+      border: 2px solid $gray;
+      background: $tertiary;
+    }
+
+    &_whiteRound {
+      border-radius: 50%;
+      background-color: transparent;
+      border: 2px solid $tertiary;
+    }
+
+    &_transparent {
+      color: $gray-light3;
+      border: 1px solid $gray-light3;
+      background-color: transparent;
     }
   }
 
   &__size {
     &_sm {
-      min-height: 30px;
+      height: 32px;
       font-size: 14px;
+      .icon {
+        max-width: 20px;
+        max-height: 20px;
+      }
+    }
+
+    &_smRound {
+      width: 20px;
+      height: 20px;
+      padding: 10px;
+
+      .icon {
+        max-width: 20px;
+        max-height: 20px;
+      }
     }
 
     &_md {
-      min-height: 40px;
+      height: 40px;
       font-size: 16px;
     }
-  }
 
-  &__icon {
-    max-height: 30px;
+    &_mdRound {
+      width: 40px;
+      height: 40px;
+      padding: 10px;
+
+      .icon {
+        max-width: 35px;
+        max-height: 35px;
+      }
+    }
+
+    &_lg {
+      height: 48px;
+      font-size: 16px;
+    }
+
+    &_lgRound {
+      width: 60px;
+      height: 60px;
+      padding: 10px;
+
+      .icon {
+        max-width: 50px;
+        max-height: 50px;
+      }
+    }
   }
 }

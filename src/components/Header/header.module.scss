@@ -1,0 +1,12 @@
+@import "../../styles/constants.scss";
+
+.header {
+  position: fixed;
+  width: calc(100% - 50px);
+  background-color: transparent;
+  padding: 20px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 10;
+}
